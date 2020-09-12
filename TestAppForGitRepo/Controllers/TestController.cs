@@ -11,7 +11,7 @@ namespace TestAppForGitRepo.Controllers
     {               
         public IActionResult Index(string username, bool isNew)
         {
-            string returnText = "Hello " + username;
+            string returnText = "Welcome " + username;
             if (isNew)
                 returnText += " for the first time login";
             
