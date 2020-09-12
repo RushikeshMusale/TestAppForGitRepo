@@ -7,10 +7,12 @@
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
-    ***REMOVED***
-        public IActionResult Index()
+***REMOVED***
+    ***REMOVED***               
+***REMOVED***
         ***REMOVED***
-            return Content("Simple Hello");
+            string returnText = "Hello " + username;
+***REMOVED***
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
