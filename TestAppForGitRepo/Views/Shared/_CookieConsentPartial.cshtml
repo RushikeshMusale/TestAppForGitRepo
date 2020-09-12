@@ -1,13 +1,13 @@
 ﻿@using Microsoft.AspNetCore.Http.Features
 
-@***REMOVED***
+@{
     var consentFeature = Context.Features.Get<ITrackingConsentFeature>();
     var showBanner = !consentFeature?.CanTrack ?? false;
     var cookieString = consentFeature?.CreateConsentCookie();
-***REMOVED***
+}
 
 @if (showBanner)
-***REMOVED***
+{
     <nav id="cookieConsent" class="navbar navbar-default navbar-fixed-top" role="alert">
         <div class="container">
             <div class="navbar-header">
@@ -31,11 +31,11 @@
         </div>
     </nav>
     <script>
-        (function () ***REMOVED***
-            document.querySelector("#cookieConsent button[data-cookie-string]").addEventListener("click", function (el) ***REMOVED***
+        (function () {
+            document.querySelector("#cookieConsent button[data-cookie-string]").addEventListener("click", function (el) {
                 document.cookie = el.target.dataset.cookieString;
                 document.querySelector("#cookieConsent").classList.add("hidden");
-    ***REMOVED***, false);
-***REMOVED***)();
+            }, false);
+        })();
     </script>
-***REMOVED***
+}
