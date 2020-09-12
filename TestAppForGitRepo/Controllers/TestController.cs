@@ -11,13 +11,15 @@ namespace TestAppForGitRepo.Controllers
     {               
         public IActionResult Index(string username, bool isNew)
         {
-            string oneMoreParam = "hi I am your Greatest nightmare!";
+            string oneMoreParam = "hi I am your nightmare";
 
             string returnText = "Welcome " + username;
             if (isNew)
                 returnText += " for the first time login";
             returnText = oneMoreParam + returnText;
-            return Content(returnText);
+
+
+            return Content(returnText+"What do you say???");
         }
     }
 }
