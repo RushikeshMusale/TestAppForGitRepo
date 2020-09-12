@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TestAppForGitRepo.Controllers
 {
+    [Route("[controller]")]
     public class TestController : Controller
-    {
-        public IActionResult Index()
+    {               
+        public IActionResult Index(string username)
         {
-            return Content("Simple Hello");
+            string returnText = "Hello " + username;
+            return Content(returnText);
         }
     }
 }
