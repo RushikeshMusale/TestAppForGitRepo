@@ -11,6 +11,7 @@ namespace TestAppForGitRepo.Controllers
     {               
         public IActionResult Index(string username, bool isNew)
         {
+            // Lets just add a comment & see the effect on the new commits
             string oneMoreParam = "hi I am your nightmare";
 
             string returnText = "Welcome " + username;
